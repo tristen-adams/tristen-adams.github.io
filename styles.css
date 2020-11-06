@@ -1,11 +1,16 @@
-html {
+html {    
+    /*BG*/
+    min-height: 100%;
+    background: radial-gradient(transparent, black), #0f0f0f;
+    background-size: cover;
+}
+
+body {
     /*TEXT*/
     font-family: 'Fira Mono', monospace;
     text-align: center;
     
-    
     /*PAGE*/
-    background: radial-gradient(transparent, black), #0f0f0f;
     margin-left: 20%;
     margin-right: 20%;
     margin-top: 5%;
@@ -16,17 +21,19 @@ html {
     color: #ff3d00;
     font-weight: 700;
     font-size: 80px;
-    text-shadow: 0 0 40px #ff3d00;
+    text-shadow: 0 0 60px #ff3d00;
     margin: 60px;
 }
 
 #title {
     font-size: 60px;
-    color: #a0a0a0;
+    color: #D50000;
+    text-shadow: 0 0 40px #D50000;
 }
 
 p {
     text-align: left;
     color: #d0d0d0;
+    text-shadow: 0 0 10px #d0d0d080;
     line-height: 1.5;
 }
