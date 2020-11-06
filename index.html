@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!doctype html>
 
 <html lang="en">
@@ -183,4 +184,191 @@
             }
         </script>
     </body>
+=======
+<!doctype html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+
+        <title>NO NUT NOVEMBER</title>
+        <meta name="" content="">
+        <meta name="" content="">
+
+        <link rel="stylesheet" href="styles.css?v=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+    </head>
+
+    <body>
+        <div id="title"></div>
+        <div id="countdown"></div>
+        <p style="font-size:20px;"><u>RULES:</u></p>
+        <p id="instructions"></p><br>
+        <p><u>NOTES:</u></p>
+        <p id="notes"></p>
+        <!--<script src="scripts.js"></script>-->
+        <script>
+            /****************************
+             * TITLE + BODY
+             ****************************/
+            let [month, date, year] = new Date().toLocaleDateString("en-US").split("/");
+            month = parseInt(month);
+            // month = 12;
+            // date = 25;
+            switch (month) {
+                    
+                    // JAN
+                case 1:
+                    document.getElementById("title").innerHTML = "JACK IT JANUARY";
+                    break;
+                    
+                    // FEB
+                case 2:
+                    document.getElementById("title").innerHTML = "FAST-AS-YOU-CAN FEBRUARY";
+                    document.getElementById("instructions").innerHTML =
+                        "Every day until March 1st, you will be given an amount of time within which you <b>MUST</b> cum.<br><br>" + 
+                        "Today is February " + date + ". You will have exactly " + secondsToMins(-11 * date + 371) + 
+                        " to cum.";
+                    document.getElementById("notes").innerHTML = 
+                        "1. Edging is STRICTLY prohibited.<br>" +
+                        "2. If you don't cum within the given time, you must stop and try again with at least 10 minutes in between attempts.<br>" + 
+                        "3. You may cum as much as you like, however your first orgasm must be within the time limit.<br>" + 
+                        "4. Time (in seconds) = 360 - 10(day - 1) - (day - 1)<br>" + 
+                            "ex. For February 2nd, 348 seconds = 360 - 10(2 - 1) - (2 - 1)";
+                    break;
+                    
+                    // MAR
+                case 3:
+                    document.getElementById("title").innerHTML = "MASTURBATION MARCH";
+                    break;
+                    
+                    // APR
+                case 4:
+                    document.getElementById("title").innerHTML = "ABSTINENCE APRIL";
+                    break;
+                    
+                    // MAY
+                case 5:
+                    document.getElementById("title").innerHTML = "MEAT BEAT MAY";
+                    break;
+                    
+                    // JUN
+                case 6:
+                    document.getElementById("title").innerHTML = "JERK OFF JUNE";
+                    break;
+                    
+                    // JUL
+                case 7:
+                    document.getElementById("title").innerHTML = "JIZZ JULY";
+                    break;
+                    
+                    // AUG
+                case 8:
+                    document.getElementById("title").innerHTML = "ASS PLAY AUGUST";
+                    break;
+                    
+                    // SEP
+                case 9:
+                    document.getElementById("title").innerHTML = "SEX TOY SEPTEMBER";
+                    break;
+                    
+                    // OCT
+                case 10:
+                    document.getElementById("title").innerHTML = "ORGASM OCTOBER";
+                    break;
+                    
+                    // NOV
+                case 11:
+                    document.getElementById("title").innerHTML = "NO NUT NOVEMBER";
+                    document.getElementById("instructions").innerHTML =
+                        "Until December 1st, you may <b>NOT</b> have any voluntary orgasm of <b>ANY</b> kind.<br><br>" + 
+                        "Today is November " + date + ". Stay strong.";
+                    document.getElementById("notes").innerHTML = 
+                        "1. It customary to avoid sexual content and activity, although this isn't a requirement.<br>" +
+                        "2. Edging is permitted, but it is very risky.<br>" + 
+                        "3. You <i>may</i> tempt others playing into breaking ONLY IF YOU ARE ALSO PARTICIPATING.<br>" +
+                        "4. Wet dreams and precum do NOT disqualify you.";
+                    break;
+                    
+                    // DEC
+                case 12:
+                    document.getElementById("title").innerHTML = "DESTROY DICK DECEMBER";
+                    document.getElementById("instructions").innerHTML =
+                        "Every day until January 1st, you must masturbate a specified number of times.<br><br>" + 
+                        "Today is December " + date + ".<br><br>" +
+                        "Easy: You must cum " + Math.ceil(date/2) + " times.<br>" + 
+                        "Medium: You must cum " + Math.ceil(date/2) + " times and edge " + Math.floor(date/3) + " times.<br>" + 
+                        "Hard: You must cum " + (Math.ceil(date/2) + Math.ceil(3 * (date / 31))) + " times and edge " + Math.ceil(date/2) + " times.";
+                    document.getElementById("notes").innerHTML = 
+                        "1. The numbers provided represent the minumum number of times masturbated/edges per day.<br>" +
+                        "2. On December 1st, you may choose one of three levels. You may increase difficulty at any time, but you may never decrease the difficulty.<br>" + 
+                        "3. Failing to choose a difficulty on December 1st will automatically assign you to Hard.<br>";
+                    break;
+                default:
+                    document.getElementById("title").innerHTML = "something has gone terribly wrong";
+                    break;
+                    
+                    
+            }
+            
+            
+             /****************************
+             * COUNTDOWN TIMER
+             ****************************/
+            var countDownDate = new Date(year, month, 1).getTime();
+
+            // Update the count down every 1 second
+            var x = setInterval(function() {
+
+              // Get today's date and time
+              var now = new Date().getTime();
+
+              // Find the distance between now and the count down date
+              var distance = countDownDate - now;
+
+              // Time calculations for days, hours, minutes and seconds
+              var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+              var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+              var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+              var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+              // Display the result in the element with id="demo"
+              document.getElementById("countdown").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+              // If the count down is finished, write some text
+              if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "EXPIRED";
+              }
+            }, 1000);
+            
+             /****************************
+             * GET CURRENT DAY OF WEEK
+             ****************************/
+            function dayOfWeek(month, date, year) {
+                let y = year;
+                let m = month;
+                
+                // calculates day month starts on
+                let yo = y - Math.floor((14 - m)/12);
+                let x = yo + Math.floor(yo/4) - Math.floor(yo/100) + Math.floor(yo/400);
+                let mo = m + 12 * Math.floor((14 - m)/12) - 2;
+                let day = (1 + x + Math.floor((31 * mo)/12))%7;
+                
+                // calculates current day of week
+                return (day + date) % 7 + 1;
+            }
+             /****************************
+             * CONVERT SECONDS INTO MINUTES AND SECONDS
+             ****************************/
+            function secondsToMins(seconds) {
+                let mins = Math.floor(seconds / 60);
+                let secs = Math.floor(((seconds / 60) - mins) * 60);
+                secs = (secs < 10 ? "0" + secs : secs);
+                return mins + ":" + secs;
+            }
+        </script>
+    </body>
+>>>>>>> cc33cbecc600be5e88049264268738fc6e73ff55
 </html>
