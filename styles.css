@@ -1,0 +1,32 @@
+body {
+    /*TEXT*/
+    font-family: 'Fira Mono', monospace;
+    text-align: center;
+    
+    
+    /*PAGE*/
+    background-color: #0f0f0f;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+#countdown {
+    color: #ff3d00;
+    font-weight: 700;
+    font-size: 80px;
+    text-shadow: 0 0 40px #ff3d00;
+    margin: 60px;
+}
+
+#title {
+    font-size: 60px;
+    color: #a0a0a0;
+}
+
+p {
+    text-align: left;
+    color: #d0d0d0;
+    line-height: 1.5;
+}
